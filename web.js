@@ -1,12 +1,12 @@
 var express = require('express');
 var fs = require('fs');
 var app = express.createServer(express.logger());
-var buffer = fs.readFileSync('index.html', 'utf-8');
-var text = buffer.toString('utf-8');
+var buffer = fs.readFileSync('index.html');
+
 
 app.get('/', function(request, response) { 
   
-  response.end('text');
+  response.send('buffer.toString('utf-8')');
 
 });
 
