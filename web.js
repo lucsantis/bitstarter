@@ -1,17 +1,12 @@
 var express = require('express');
 var fs = require('fs');
-
 var app = express.createServer(express.logger());
+var buffer = fs.readFileSync('index.html');
+var text = buffer.toString('utf-8')
 
 app.get('/', function(request, response) { 
-  fs.readFileSync("index.html", "utf-8");
-  response.send('buf');
-
-var buf = new Buffer(256);
-len = buf.write('\u00bd + \u00bc = \u00be', 0);
-console.log(len + " bytes: " + buf.toString('utf', 0, len));
-
-
+  
+  response.send('text');
 
 });
 
