@@ -4,6 +4,8 @@ var app = express.createServer(express.logger());
 var buffer = fs.readFileSync('index.html');
 var text = buffer.toString('utf-8');
 
+//a
+
 app.get('/', function(request, response) { 
   
   response.send(text);
