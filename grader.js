@@ -7,10 +7,12 @@ and basic DOM parsing.
 */
 
 var fs = require('fs');
+var rest = require('restler');
 var program = require('commander');
 var cheerio = require('cheerio');
 var HTMLFILE_DEFAULT = "index.html";
 var CHECKSFILE_DEFAULT = "checks.json";
+var URL_DEFAULT = "";
 
 var assertFileExists = function(infile) {
     var instr = infile.toString();
